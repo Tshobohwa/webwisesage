@@ -29,15 +29,15 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: webwisesage
+  username: postgres
 
   # The password associated with the postgres role (username).
-  #password:
+  password: 243243
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  #host: localhost
+  host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: webwisesage_production
-  username: webwisesage
-  password: <%= ENV["WEBWISESAGE_DATABASE_PASSWORD"] %>
+  database: webwisesage_development
+  username: postgresql
+  password: 243243
+  host: localhost

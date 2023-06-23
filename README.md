@@ -26,7 +26,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [webwisesage] <a name="about-project"></a>
+# 📖 webwisesage <a name="about-project"></a>
 
 webwisesage is a blog website where users have the ability to create blogs related to web development, like them, and also comment on them. It has been implemented using the Ruby on Rails library and PostgreSQL.
 

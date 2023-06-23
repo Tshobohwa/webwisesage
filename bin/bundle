@@ -22,18 +22,21 @@ m = Module.new do
   end
 
   def cli_arg_version
-    return unless invoked_as_script? && ARGV.first == 'update'
+    return unless invoked_as_script? && 'update'.start_with?(ARGV.first || ' ')
+
+    bundler_version = nil
+    update_index = nil
 
     ARGV.each_with_index do |arg, i|
-      next unless i.positive? && arg =~ Gem::Version::ANCHORED_VERSION_PATTERN
-
-      if ARGV[i - 1] == '--bundler'
-        return Regexp.last_match(1) if arg =~ /\A(#{Gem::Version::VERSION_PATTERN})\z/
-        return arg.split('=')[1] if arg.include?('=')
+      if update_index && update_index.succ == i && arg =~ Gem::Version::ANCHORED_VERSION_PATTERN
+        bundler_version = arg
+      elsif arg =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
+        bundler_version = Regexp.last_match(1)
+        update_index = i
       end
     end
 
-    nil
+    bundler_version
   end
 
   def gemfile

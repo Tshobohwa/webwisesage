@@ -26,7 +26,6 @@ m = Module.new do
 
     bundler_version = nil
     update_index = nil
-
     ARGV.each_with_index do |arg, i|
       if update_index && update_index.succ == i && arg =~ Gem::Version::ANCHORED_VERSION_PATTERN
         bundler_version = arg
@@ -35,7 +34,6 @@ m = Module.new do
         update_index = i
       end
     end
-
     bundler_version
   end
 

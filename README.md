@@ -26,17 +26,13 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [webwisesage] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[webwisesage]** is a blog website where users have the ability to create blogs related to web development, like them, and also comment on them. It has been implemented using the Ruby on Rails library and PostgreSQL.
+webwisesage is a blog website where users have the ability to create blogs related to web development, like them, and also comment on them. It has been implemented using the Ruby on Rails library and PostgreSQL.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Server</summary>
@@ -56,12 +52,10 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_3]** Create a new user
-- **[key_feature_1]** Create a post
-- **[key_feature_2]** Comment a post
-- **[key_feature_3]** Like a post
+- Create a new user
+- Create a post
+- Comment a post
+- Like a post
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,8 +115,6 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Tshobohwa**
 
 - GitHub: [@githubhandle](https://github.com/Tshobohwa)
@@ -137,8 +129,8 @@ To run tests, run the following command:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]** Authorisation
-- [ ] **[new_feature_2]** Authentication
+- [ ] Authorisation
+- [ ] Authentication
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,8 +148,6 @@ Feel free to check the [issues page](https://github.com/Tshobohwa/webwisesage/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project consider giving it a start.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -166,8 +156,6 @@ If you like this project consider giving it a start.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
 I would like to thank Microverse for the opportunity it gave me to work on this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -175,8 +163,6 @@ I would like to thank Microverse for the opportunity it gave me to work on this 
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - How do I contribute to this project ?
 

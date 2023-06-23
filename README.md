@@ -178,13 +178,9 @@ I would like to thank Microverse for the opportunity it gave me to work on this 
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- How do I contribute to this project ?
 
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+  - You can either contact me so that I can add you as a collaborator or leave an issue
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

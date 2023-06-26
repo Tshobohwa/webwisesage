@@ -72,3 +72,8 @@ group :test do
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0'
+  gem 'shoulda-matchers', '~> 4.0'
+end

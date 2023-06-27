@@ -77,3 +77,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 5.0'
   gem 'shoulda-matchers', '~> 4.0'
 end
+
+gem 'rails-controller-testing'
+gem 'rspec-support', '3.12.1'

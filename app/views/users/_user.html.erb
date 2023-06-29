@@ -1,0 +1,11 @@
+<li class="user">
+    <a href="users/<%= user.id %>" class="user-anchor">
+        <img src="<%= user.photo%>" alt="<%= user.name %>'s photo" class="user-image">
+        <div class="user-infos">
+            <h2 class="user-name">
+                <%=user.name%>
+            </h2>
+            <small class="user-posts-count">Posts: <%= user.posts_count || 0%></small>
+        </div>
+    </a>
+</li>

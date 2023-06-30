@@ -1,10 +1,11 @@
 <div class="page-container">
     <%= render partial: 'user', locals: {user: @user}  %>
-    <p class="user-bio"><%= @user.bio %></p>
-    <% @posts.each do |post| %>
-    <a href="/users/<%= @user.id %>/posts/<%= post.id%>">
-        <%= render partial: 'posts/post', locals: {post: post} %>
-    </a>
+        <p class="user-bio"><%= @user.bio %></p>
+        <% @posts.each do |post| %>
+        <a href="/users/<%= @user.id %>/posts/<%= post.id%>">
+            <%= render partial: 'posts/post', locals: {post: post} %>
+        </a>
+        <hr class="post-border">
     <% end %>
     <a href="/users/<%= @user.id%>/posts/" class="see-posts__link" >See all posts</a>
 </div>

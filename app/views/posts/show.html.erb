@@ -1,1 +1,11 @@
-<h1>Here is one post from a user</h1>
+<div class="page-container">
+    <div class="post-header">
+        <p class="post-author">Post by: <%= @post_author %></p>
+        <small>
+            <span>Likes: <%= @likes%></span>
+            <span>Comments: <%= @comments_count%> </span>
+        </small>
+    </div>
+    <p class="post-text" ><%= @post.text%></p>
+    <%= render partial: 'posts/post_comments', locals: {comments: @comments} %>
+</div>

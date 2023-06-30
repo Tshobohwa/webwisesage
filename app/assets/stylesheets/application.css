@@ -1,15 +1,155 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+:root {
+  --primary-color: #000;
+  --light-color: #f3f3f3;
+  --green-light-color: #d3d3d3;
+  --blue-light-color: rgb(83, 83, 255);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  width: 100vw;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+li {
+  list-style: none;
+}
+
+.page-container {
+  max-width: 100rem;
+  margin: 2rem auto;
+}
+
+small {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.4rem;
+  align-self: flex-end;
+  font-weight: bold;
+  margin: 2rem;
+}
+
+.users-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1rem;
+  max-width: 100rem;
+  margin: auto;
+}
+
+.users-list-element {
+  height: 20rem;
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  border: solid 1px var(--green-light-color);
+}
+
+.user-anchor {
+  height: 100%;
+  width: 100%;
+}
+
+.user {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  gap: 1rem;
+}
+
+.user-image {
+  background-color: var(--green-light-color);
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.user-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.user-bio {
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.user-name {
+  font-size: 2.5rem;
+}
+
+.post-container {
+  margin: 3rem 0;
+}
+
+.user-posts-count {
+  font-size: 2rem;
+  text-align: end;
+}
+
+.post-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.see-posts__link {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border: solid 1px var(--green-light-color);
+  margin: 3rem;
+  margin-left: 40%;
+  background-color: rgb(150, 249, 150);
+}
+
+.post-stats {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.post-border {
+  width: 100%;
+  height: 2px;
+  background-color: var(--green-light-color);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-author {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.post-text {
+  padding: 2rem 0;
+}

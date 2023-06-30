@@ -5,6 +5,7 @@
         <%= render partial: 'post', locals: {post: post} %>
         <% comments = post.recent_comments %>
         <%= render partial: 'posts/post_comments', locals: {comments: comments}%>
+        <hr class="post-border">
     </a>
 <% end %>
 </div>

@@ -1,5 +1,9 @@
 <ul class="users-list">
     <% @users.each do |user| %>
-        <%= render partial: 'user', locals: { user: user } %>
+        <li class="users-list-element">
+                <a href="users/<%= user.id %>" class="user-anchor">
+                    <%= render partial: 'user', locals: { user: user } %>
+                </a>
+        </li>
     <% end %>
 </ul>

@@ -1,1 +1,10 @@
-<h1>Here are posts of a single user</h1>
+<div class="page-container">
+<%= render partial: 'users/user', locals: {user: @user}%>
+<% @posts.each do |post| %>
+    <a href="/users/<%= @user.id %>/posts/<%= post.id%>">
+        <%= render partial: 'post', locals: {post: post} %>
+        <% comments = post.recent_comments %>
+        <%= render partial: 'posts/post_comments', locals: {comments: comments}%>
+    </a>
+<% end %>
+</div>

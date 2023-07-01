@@ -1,11 +1,16 @@
 <div class="page-container">
-<%= render partial: 'users/user', locals: {user: @user}%>
-<% @posts.each do |post| %>
-    <a href="/users/<%= @user.id %>/posts/<%= post.id%>">
-        <%= render partial: 'post', locals: {post: post} %>
-        <% comments = post.recent_comments %>
-        <%= render partial: 'posts/post_comments', locals: {comments: comments}%>
-        <hr class="post-border">
-    </a>
-<% end %>
+    <%= render partial: 'users/user', locals: {user: @user}%>
+    <% if flash[:notice] %>
+        <div class="notice">
+            <%= flash[:notice] %>
+        </div>
+    <% end %>
+    <% @posts.each do |post| %>
+        <a href="/users/<%= @user.id %>/posts/<%= post.id%>">
+            <%= render partial: 'post', locals: {post: post} %>
+            <% comments = post.recent_comments %>
+            <%= render partial: 'posts/post_comments', locals: {comments: comments}%>
+            <hr class="post-border">
+        </a>
+    <% end %>
 </div>

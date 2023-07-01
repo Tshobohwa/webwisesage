@@ -170,11 +170,6 @@ small {
   padding: 0 2rem;
 }
 
-.form-textarea:focus,
-.form-input:focus {
-  outline: none;
-}
-
 .form-input {
   height: 4rem;
 }
@@ -182,6 +177,12 @@ small {
 .form-textarea {
   height: 20rem;
 }
+
+.form-textarea:focus,
+.form-input:focus {
+  outline: none;
+}
+
 
 .form-btn {
   width: 14rem;

@@ -21,8 +21,8 @@ class PostsController < ApplicationController
   end
 
   def create
-    title = params[:post][:title]
-    text = params[:post][:text]
+    title = post_params[:title]
+    text = post_params[:text]
     post = Post.new(author_id: current_user.id, title:, text:, comments_counter: 0, likes_counter: 0)
 
     if post.save
@@ -30,5 +30,11 @@ class PostsController < ApplicationController
     else
       render :new, notice: 'An error occured while creating the post!'
     end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end

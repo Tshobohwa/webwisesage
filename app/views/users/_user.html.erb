@@ -8,6 +8,6 @@
             <h2>CURRENT USER</h2>
             <a href="/users/<%= user.id %>/posts/new" class="add-post-link">ADD NEW POST</a>
         <% end %>
-        <small class="user-posts-count">Posts: <%= user.posts_count || 0%></small>
+        <small class="user-posts-count">Posts: <%= user.posts_counter || 0%></small>
     </div>
 </div>

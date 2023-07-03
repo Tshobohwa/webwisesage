@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def create
-    text = params[:comment][:text]
+    text = comment_params[:text]
     post_id = params[:id].to_i
     comment = Comment.new(author_id: current_user.id, text:, post_id:)
 
@@ -14,5 +14,11 @@ class CommentsController < ApplicationController
     else
       render :new, notice: 'An error occured while adding the comment!'
     end
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:text)
   end
 end

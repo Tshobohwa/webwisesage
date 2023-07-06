@@ -61,7 +61,7 @@ small {
 }
 
 .users-list-element {
-  height: 20rem;
+  height: 25rem;
   width: 100%;
   border-radius: 2rem;
   overflow: hidden;
@@ -82,7 +82,7 @@ small {
 
 .user-image {
   background-color: var(--green-light-color);
-  height: 20rem;
+  height: 25rem;
   width: 100%;
   object-fit: cover;
   object-position: top;
@@ -119,6 +119,7 @@ small {
   margin: 1rem 0;
 }
 
+.add-post-link,
 .see-posts__link {
   padding: 1rem 3rem;
   font-size: 2rem;
@@ -152,4 +153,63 @@ small {
 
 .post-text {
   padding: 2rem 0;
+}
+
+.post-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-textarea,
+.form-input {
+  border: solid 1px var(--green-light-color);
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  padding: 0 2rem;
+}
+
+.form-input {
+  height: 4rem;
+}
+
+.form-textarea {
+  height: 20rem;
+}
+
+.form-textarea:focus,
+.form-input:focus {
+  outline: none;
+}
+
+.form-btn {
+  width: 14rem;
+  margin: auto;
+  height: 4rem;
+  border-radius: 0.5rem;
+  border: solid 1px var(--green-light-color);
+  background-color: rgb(150, 249, 150);
+}
+
+.notice {
+  font-size: 3rem;
+  color: red;
+}
+
+.post-btn {
+  height: 4rem;
+  border: solid 1px var(--green-light-color);
+  background-color: skyblue;
+  color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-user-link {
+  font-size: 2.5rem;
+  color: white;
+  background-color: yellowgreen;
 }

@@ -1,0 +1,13 @@
+<div class="page-container">
+  <h2>New post:</h2>
+    <%= form_with class: 'post-form', model: @post, url: { action: "create" }, method: :post do |f| %>
+      <%= f.text_field :title, class: 'form-input', placeholder: 'title' %>
+      <%= f.text_area :text, placeholder: 'Write your post here', class: 'form-textarea' %>
+      <%= f.submit class: 'form-btn' %>
+    <% end %>
+    <% if flash[:notice] %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+</div>

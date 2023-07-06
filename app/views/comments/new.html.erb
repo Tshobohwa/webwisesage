@@ -1,0 +1,13 @@
+<div class="page-container">
+    <%= render partial:'posts/post', locals: {post: @post} %>
+    <h2>ADD COMMENT:</h2>
+    <%= form_with class: 'post-form', model: @comment, url: { action: "create" }, method: :post do |f| %>
+      <%= f.text_area :text, placeholder: 'Write your post here', class: 'form-textarea' %>
+        <%= f.submit 'ADD COMMENT', class: 'form-btn' %>
+    <% end %>
+    <% if flash[:notice] %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+</div>

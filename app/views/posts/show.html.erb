@@ -5,7 +5,16 @@
             <span>Likes: <%= @likes%></span>
             <span>Comments: <%= @comments_count%> </span>
         </small>
+        <div class="buttons-container">
+            <a href="/users/<%= @author.id %>/posts/<%= @post.id%>/comments/new" class="post-btn"> ADD COMMENT</a>
+            <%= form_with model: @like, url: { controller: "likes", action: "create", author_id: @author.id, id: @post.id }, method: :post do |f| %>
+                <%= f.submit 'Like post', class: 'form-btn' %>
+            <% end %>
+        </div>
     </div>
     <p class="post-text" ><%= @post.text%></p>
+    <div class="notice">
+        <%= flash[:notice] %>
+      </div>
     <%= render partial: 'posts/post_comments', locals: {comments: @comments} %>
 </div>

@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "users#index"
-  get "/users/:id", to: "users#show"
+  get "/users/:id", to: "users#show", as: "user"
   get "/users/:id/posts", to: "posts#index"
 
   get "users/:author_id/posts/new", to: "posts#new"

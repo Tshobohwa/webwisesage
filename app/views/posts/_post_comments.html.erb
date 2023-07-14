@@ -1,6 +1,5 @@
 <div class="post-comments__container">
     <% comments.each do |comment| %>
-    <% comment_author = User.find(comment.author_id).name %>
-        <p class="comment-text"> <%= comment_author%>: <%= comment.text %></p>
+        <p class="comment-text"> <%= comment.author.name%>: <%= comment.text %></p>
     <% end %>
 </div>

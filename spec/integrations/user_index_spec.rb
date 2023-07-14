@@ -9,6 +9,11 @@ RSpec.describe 'User #Index Page', type: :feature do
     visit users_path
   end
 
+  it 'It should show all the users names' do
+    expect(page.html).to have_content(@user1.name)
+    expect(page.html).to have_content(@user2.name)
+  end
+
   it 'It should show the picture for each user.' do
     expect(page.html).to include(@user1.photo)
     expect(page.html).to include(@user2.photo)

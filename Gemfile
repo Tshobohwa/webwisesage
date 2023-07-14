@@ -80,12 +80,8 @@ end
 
 gem 'rails-controller-testing'
 
-<<<<<<< HEAD
-gem 'devise', '~> 4.9'
-=======
 gem "devise", "~> 4.9"
 
 # gem 'rspec-support', '3.12.6'
 gem 'rspec-mocks', '3.12.6'
 
->>>>>>> 346f405a85a71964ccc3fc9447d1afbc7c8adaae

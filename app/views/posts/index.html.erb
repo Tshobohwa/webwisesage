@@ -6,9 +6,9 @@
         </div>
     <% end %>
     <% @posts.each do |post| %>
-        <a href="/users/<%= @user.id %>/posts/<%= post.id%>">
+        <a href="/users/<%= @user.id %>/posts/<%= post.id%>" id="post-<%= @user.id %><%= post.id %>">
             <%= render partial: 'post', locals: {post: post} %>
-            <% comments = post.recent_comments %>
+            <% comments = post.comments %>
             <%= render partial: 'posts/post_comments', locals: {comments: comments}%>
             <hr class="post-border">
         </a>

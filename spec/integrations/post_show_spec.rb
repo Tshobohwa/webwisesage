@@ -27,5 +27,6 @@ RSpec.describe 'Post #Show Page', type: :feature do
   end
   it 'It should display the author of each commentor.' do
     page.has_content?(@comment.author.name)
+    page.has_content?(@comment.text)
   end
 end

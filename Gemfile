@@ -79,6 +79,9 @@ group :development, :test do
 end
 
 gem 'rails-controller-testing'
-gem 'rspec-support', '3.12.1'
 
 gem "devise", "~> 4.9"
+
+# gem 'rspec-support', '3.12.6'
+gem 'rspec-mocks', '3.12.6'
+

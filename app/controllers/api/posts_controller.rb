@@ -6,7 +6,7 @@ class Api::PostsController < ApplicationController
     if posts.present?
       render json: { message: 'Posts loaded successfully', data: posts }, status: :ok
     else
-      render json: { message: 'Opps! might be missing something' }, status: :unprocessable_entity
+      render json: { message: 'Opps! posts list is empty' }, status: :unprocessable_entity
     end
   end
 end

@@ -11,9 +11,17 @@
   </head>
 
   <body>
-    <nav class="nav-bar">
-      <a href="./" class="current-user-link">GO TO CURRENT USER</a>
-    </nav>
+    <p class="navbar-text float-right">
+    <% if user_signed_in? %>
+      Logged in as <strong><%= current_user.name %></strong>.
+      <%= link_to "Edit profile", edit_user_registration_path, class: "navbar-link" %> |
+      <%= link_to "Logout", destroy_user_session_path, data: { "turbo-method": :delete }, class: "navbar-link"  %>
+    <% end %>
+    </p>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
     <%= yield %>
   </body>
 </html>

@@ -1,6 +1,6 @@
-class Api::PostsController <ApplicationController
+class Api::PostsController < ApplicationController
   def index
-   user = User.find(params[:author_id])
+    user = User.find(params[:author_id])
     posts = user.posts
 
     if posts.present?
@@ -9,5 +9,4 @@ class Api::PostsController <ApplicationController
       render json: { message: 'Opps! might be missing something' }, status: :unprocessable_entity
     end
   end
-
 end

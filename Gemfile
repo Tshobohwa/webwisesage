@@ -84,3 +84,6 @@ gem 'devise', '~> 4.9'
 
 # gem 'rspec-support', '3.12.6'
 gem 'rspec-mocks', '3.12.6'
+
+# API documentation gem
+gem 'rswag'

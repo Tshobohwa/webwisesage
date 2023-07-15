@@ -3,9 +3,8 @@ class Api::CommentsController < ApplicationController
   def index
     user = User.find(params[:author_id])
     post = user.posts.find(params[:id])
-    comments = post.comments
 
-    render json: comments
+    render json: post.comments
   end
 
   def create

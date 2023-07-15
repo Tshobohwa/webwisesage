@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get "users/:author_id/posts/:id/comments/new", to: "comments#new"
   post "users/:author_id/posts/:id/comments", to: "comments#create"
   post "users/:author_id/posts/:id", to: "likes#create", as: "like_post"
+  get "api/users/:author_id/posts", to: "api/posts#index"
+  get "api/users/:author_id/posts/:id/comments", to: "api/comments#index"
+  post "api/users/:author_id/posts/:id/comments", to: "api/comments#create"
 
   resources :posts, only: [:index, :show, :new]
 end
